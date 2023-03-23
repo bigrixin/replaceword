@@ -3,9 +3,12 @@ Replaces a word in a text file with case-matching and automatic recognition of t
 
 
 #### Not match case:  
-  source str: name
+  source str: name 
+  
   replace str: text
+  
   source file content: My name is bigName
+  
   result content: My text is is bigtext
 
 #### Match case:  
