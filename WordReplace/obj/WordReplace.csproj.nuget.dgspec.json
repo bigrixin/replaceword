@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\template-app-sample\\WordReplace\\WordReplace\\WordReplace\\WordReplace.csproj": {}
+    "D:\\template-app-sample\\WordReplace\\replaceword\\WordReplace\\WordReplace.csproj": {}
   },
   "projects": {
-    "D:\\template-app-sample\\WordReplace\\WordReplace\\WordReplace\\WordReplace.csproj": {
+    "D:\\template-app-sample\\WordReplace\\replaceword\\WordReplace\\WordReplace.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\template-app-sample\\WordReplace\\WordReplace\\WordReplace\\WordReplace.csproj",
+        "projectUniqueName": "D:\\template-app-sample\\WordReplace\\replaceword\\WordReplace\\WordReplace.csproj",
         "projectName": "WordReplace",
-        "projectPath": "D:\\template-app-sample\\WordReplace\\WordReplace\\WordReplace\\WordReplace.csproj",
+        "projectPath": "D:\\template-app-sample\\WordReplace\\replaceword\\WordReplace\\WordReplace.csproj",
         "packagesPath": "C:\\Users\\Steven Zhai\\.nuget\\packages\\",
-        "outputPath": "D:\\template-app-sample\\WordReplace\\WordReplace\\WordReplace\\obj\\",
+        "outputPath": "D:\\template-app-sample\\WordReplace\\replaceword\\WordReplace\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -63,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

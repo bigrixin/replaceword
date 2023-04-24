@@ -110,5 +110,26 @@ namespace WordReplace
             else
                 button1.Enabled = false;
         }
+
+        private void richTextBox1_DoubleClick(object sender, EventArgs e)
+        {
+
+            if (richTextBox1.Text != "")
+                Clipboard.SetText(richTextBox1.Text);
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (richTextBox2.Text != "")
+                Clipboard.SetText(richTextBox2.Text);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            richTextBox1.Text = "";
+            richTextBox2.Text = "";
+        }
     }
 }

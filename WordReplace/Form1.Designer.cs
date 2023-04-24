@@ -43,6 +43,7 @@
             splitContainer1 = new SplitContainer();
             richTextBox1 = new RichTextBox();
             richTextBox2 = new RichTextBox();
+            button2 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -87,6 +88,7 @@
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(button2);
             panel2.Controls.Add(checkBox2);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(checkBox1);
@@ -104,6 +106,8 @@
             // checkBox2
             // 
             checkBox2.AutoSize = true;
+            checkBox2.Checked = true;
+            checkBox2.CheckState = CheckState.Checked;
             checkBox2.ForeColor = Color.IndianRed;
             checkBox2.Location = new Point(734, 13);
             checkBox2.Name = "checkBox2";
@@ -116,7 +120,7 @@
             // button1
             // 
             button1.Enabled = false;
-            button1.Location = new Point(1037, 8);
+            button1.Location = new Point(1015, 9);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 8;
@@ -135,6 +139,7 @@
             checkBox1.TabIndex = 7;
             checkBox1.Text = "Match case";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.Visible = false;
             // 
             // textBox2
             // 
@@ -197,8 +202,10 @@
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(538, 526);
             richTextBox1.TabIndex = 9;
+            richTextBox1.Tag = "";
             richTextBox1.Text = "";
             richTextBox1.TextChanged += richTextBox1_TextChanged;
+            richTextBox1.DoubleClick += richTextBox1_DoubleClick;
             // 
             // richTextBox2
             // 
@@ -209,6 +216,17 @@
             richTextBox2.Size = new Size(635, 526);
             richTextBox2.TabIndex = 10;
             richTextBox2.Text = "";
+            richTextBox2.TextChanged += richTextBox2_TextChanged;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(1096, 9);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 5;
+            button2.Text = "Clear";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // WordReplace
             // 
@@ -248,5 +266,6 @@
         private RichTextBox richTextBox2;
         private Button button1;
         private CheckBox checkBox2;
+        private Button button2;
     }
 }
