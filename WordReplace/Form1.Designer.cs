@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             openFileDialog1 = new OpenFileDialog();
             panel1 = new Panel();
             Browse = new Button();
             label1 = new Label();
             panel2 = new Panel();
+            button2 = new Button();
             checkBox2 = new CheckBox();
             button1 = new Button();
             checkBox1 = new CheckBox();
@@ -42,14 +44,19 @@
             label2 = new Label();
             splitContainer1 = new SplitContainer();
             richTextBox1 = new RichTextBox();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            upperCaseToolStripMenuItem = new ToolStripMenuItem();
+            lowerCaseToolStripMenuItem = new ToolStripMenuItem();
+            copyToToolStripMenuItem = new ToolStripMenuItem();
             richTextBox2 = new RichTextBox();
-            button2 = new Button();
+            toolStripSeparator1 = new ToolStripSeparator();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // openFileDialog1
@@ -69,7 +76,7 @@
             // 
             // Browse
             // 
-            Browse.Location = new Point(12, 7);
+            Browse.Location = new Point(13, 7);
             Browse.Name = "Browse";
             Browse.Size = new Size(75, 23);
             Browse.TabIndex = 4;
@@ -80,7 +87,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(165, 11);
+            label1.Location = new Point(112, 11);
             label1.Name = "label1";
             label1.Size = new Size(0, 15);
             label1.TabIndex = 3;
@@ -102,6 +109,16 @@
             panel2.Padding = new Padding(1);
             panel2.Size = new Size(1177, 39);
             panel2.TabIndex = 9;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(1096, 9);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 5;
+            button2.Text = "Clear";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // checkBox2
             // 
@@ -197,6 +214,7 @@
             // richTextBox1
             // 
             richTextBox1.BackColor = SystemColors.Info;
+            richTextBox1.ContextMenuStrip = contextMenuStrip1;
             richTextBox1.Dock = DockStyle.Fill;
             richTextBox1.Location = new Point(0, 0);
             richTextBox1.Name = "richTextBox1";
@@ -206,6 +224,33 @@
             richTextBox1.Text = "";
             richTextBox1.TextChanged += richTextBox1_TextChanged;
             richTextBox1.DoubleClick += richTextBox1_DoubleClick;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { upperCaseToolStripMenuItem, lowerCaseToolStripMenuItem, toolStripSeparator1, copyToToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(172, 76);
+            // 
+            // upperCaseToolStripMenuItem
+            // 
+            upperCaseToolStripMenuItem.Name = "upperCaseToolStripMenuItem";
+            upperCaseToolStripMenuItem.Size = new Size(171, 22);
+            upperCaseToolStripMenuItem.Text = "Upper Case";
+            upperCaseToolStripMenuItem.Click += upperCaseToolStripMenuItem_Click;
+            // 
+            // lowerCaseToolStripMenuItem
+            // 
+            lowerCaseToolStripMenuItem.Name = "lowerCaseToolStripMenuItem";
+            lowerCaseToolStripMenuItem.Size = new Size(171, 22);
+            lowerCaseToolStripMenuItem.Text = "Lower Case";
+            lowerCaseToolStripMenuItem.Click += lowerCaseToolStripMenuItem_Click;
+            // 
+            // copyToToolStripMenuItem
+            // 
+            copyToToolStripMenuItem.Name = "copyToToolStripMenuItem";
+            copyToToolStripMenuItem.Size = new Size(171, 22);
+            copyToToolStripMenuItem.Text = "Copy to Clipboard";
+            copyToToolStripMenuItem.Click += copyToToolStripMenuItem_Click;
             // 
             // richTextBox2
             // 
@@ -218,15 +263,10 @@
             richTextBox2.Text = "";
             richTextBox2.TextChanged += richTextBox2_TextChanged;
             // 
-            // button2
+            // toolStripSeparator1
             // 
-            button2.Location = new Point(1096, 9);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 5;
-            button2.Text = "Clear";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(168, 6);
             // 
             // WordReplace
             // 
@@ -246,6 +286,7 @@
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -267,5 +308,10 @@
         private Button button1;
         private CheckBox checkBox2;
         private Button button2;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem upperCaseToolStripMenuItem;
+        private ToolStripMenuItem lowerCaseToolStripMenuItem;
+        private ToolStripMenuItem copyToToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
     }
 }

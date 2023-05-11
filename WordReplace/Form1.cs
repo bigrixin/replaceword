@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace WordReplace
 {
     public partial class WordReplace : Form
@@ -113,9 +115,13 @@ namespace WordReplace
 
         private void richTextBox1_DoubleClick(object sender, EventArgs e)
         {
+            var O_str = richTextBox1.Text;
 
-            if (richTextBox1.Text != "")
-                Clipboard.SetText(richTextBox1.Text);
+            if (O_str != "")
+            {
+                Clipboard.SetText(O_str);
+            }
+
         }
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
@@ -130,6 +136,33 @@ namespace WordReplace
             textBox2.Text = "";
             richTextBox1.Text = "";
             richTextBox2.Text = "";
+        }
+
+        private void upperCaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var O_str = richTextBox1.Text;
+
+            if (O_str != "")
+            {
+                richTextBox1.Text = O_str.ToUpper();
+            }
+
+        }
+
+        private void lowerCaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var O_str = richTextBox1.Text;
+
+            if (O_str != "")
+            {
+                richTextBox1.Text = O_str.ToLower();
+            }
+        }
+
+        private void copyToToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (richTextBox1.Text != "")
+                Clipboard.SetText(richTextBox1.Text);
         }
     }
 }

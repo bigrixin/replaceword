@@ -5,6 +5,7 @@ D:\template-app-sample\WordReplace\replaceword\WordReplace\bin\Debug\net7.0-wind
 D:\template-app-sample\WordReplace\replaceword\WordReplace\bin\Debug\net7.0-windows\WordReplace.pdb
 D:\template-app-sample\WordReplace\replaceword\WordReplace\obj\Debug\net7.0-windows\WordReplace.csproj.AssemblyReference.cache
 D:\template-app-sample\WordReplace\replaceword\WordReplace\obj\Debug\net7.0-windows\WordReplace.WordReplace.resources
+D:\template-app-sample\WordReplace\replaceword\WordReplace\obj\Debug\net7.0-windows\WordReplace.Properties.Resources.resources
 D:\template-app-sample\WordReplace\replaceword\WordReplace\obj\Debug\net7.0-windows\WordReplace.csproj.GenerateResource.cache
 D:\template-app-sample\WordReplace\replaceword\WordReplace\obj\Debug\net7.0-windows\WordReplace.GeneratedMSBuildEditorConfig.editorconfig
 D:\template-app-sample\WordReplace\replaceword\WordReplace\obj\Debug\net7.0-windows\WordReplace.AssemblyInfoInputs.cache
