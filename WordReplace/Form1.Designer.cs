@@ -45,11 +45,22 @@
             splitContainer1 = new SplitContainer();
             richTextBox1 = new RichTextBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            upperCaseToolStripMenuItem1 = new ToolStripMenuItem();
             upperCaseToolStripMenuItem = new ToolStripMenuItem();
             lowerCaseToolStripMenuItem = new ToolStripMenuItem();
-            copyToToolStripMenuItem = new ToolStripMenuItem();
-            richTextBox2 = new RichTextBox();
             toolStripSeparator1 = new ToolStripSeparator();
+            copyToToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator2 = new ToolStripSeparator();
+            clearToolStripMenuItem = new ToolStripMenuItem();
+            richTextBox2 = new RichTextBox();
+            contextMenuStrip2 = new ContextMenuStrip(components);
+            firstLetterUpperCaseToolStripMenuItem = new ToolStripMenuItem();
+            upperCaseAllToolStripMenuItem = new ToolStripMenuItem();
+            lowerCaseAllToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator4 = new ToolStripSeparator();
+            clearToolStripMenuItem1 = new ToolStripMenuItem();
+            toolStripSeparator3 = new ToolStripSeparator();
+            copyToClipboardToolStripMenuItem = new ToolStripMenuItem();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -57,6 +68,7 @@
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
+            contextMenuStrip2.SuspendLayout();
             SuspendLayout();
             // 
             // openFileDialog1
@@ -116,7 +128,7 @@
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 5;
-            button2.Text = "Clear";
+            button2.Text = "Clear all";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -179,7 +191,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(262, 13);
+            label3.Location = new Point(277, 13);
             label3.Name = "label3";
             label3.Size = new Size(62, 15);
             label3.TabIndex = 5;
@@ -227,34 +239,60 @@
             // 
             // contextMenuStrip1
             // 
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { upperCaseToolStripMenuItem, lowerCaseToolStripMenuItem, toolStripSeparator1, copyToToolStripMenuItem });
+            contextMenuStrip1.BackColor = Color.Moccasin;
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { upperCaseToolStripMenuItem1, upperCaseToolStripMenuItem, lowerCaseToolStripMenuItem, toolStripSeparator1, copyToToolStripMenuItem, toolStripSeparator2, clearToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(172, 76);
+            contextMenuStrip1.Size = new Size(196, 126);
+            // 
+            // upperCaseToolStripMenuItem1
+            // 
+            upperCaseToolStripMenuItem1.Name = "upperCaseToolStripMenuItem1";
+            upperCaseToolStripMenuItem1.Size = new Size(195, 22);
+            upperCaseToolStripMenuItem1.Text = "First Letter Upper Case ";
+            upperCaseToolStripMenuItem1.Click += upperCaseToolStripMenuItem1_Click;
             // 
             // upperCaseToolStripMenuItem
             // 
             upperCaseToolStripMenuItem.Name = "upperCaseToolStripMenuItem";
-            upperCaseToolStripMenuItem.Size = new Size(171, 22);
-            upperCaseToolStripMenuItem.Text = "Upper Case";
+            upperCaseToolStripMenuItem.Size = new Size(195, 22);
+            upperCaseToolStripMenuItem.Text = "Upper Case for All";
             upperCaseToolStripMenuItem.Click += upperCaseToolStripMenuItem_Click;
             // 
             // lowerCaseToolStripMenuItem
             // 
             lowerCaseToolStripMenuItem.Name = "lowerCaseToolStripMenuItem";
-            lowerCaseToolStripMenuItem.Size = new Size(171, 22);
-            lowerCaseToolStripMenuItem.Text = "Lower Case";
+            lowerCaseToolStripMenuItem.Size = new Size(195, 22);
+            lowerCaseToolStripMenuItem.Text = "Lower Case for All";
             lowerCaseToolStripMenuItem.Click += lowerCaseToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(192, 6);
             // 
             // copyToToolStripMenuItem
             // 
             copyToToolStripMenuItem.Name = "copyToToolStripMenuItem";
-            copyToToolStripMenuItem.Size = new Size(171, 22);
+            copyToToolStripMenuItem.Size = new Size(195, 22);
             copyToToolStripMenuItem.Text = "Copy to Clipboard";
             copyToToolStripMenuItem.Click += copyToToolStripMenuItem_Click;
             // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(192, 6);
+            // 
+            // clearToolStripMenuItem
+            // 
+            clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            clearToolStripMenuItem.Size = new Size(195, 22);
+            clearToolStripMenuItem.Text = "Clear Current Area";
+            clearToolStripMenuItem.Click += clearToolStripMenuItem_Click;
+            // 
             // richTextBox2
             // 
-            richTextBox2.BackColor = SystemColors.GradientInactiveCaption;
+            richTextBox2.BackColor = Color.LightGreen;
+            richTextBox2.ContextMenuStrip = contextMenuStrip2;
             richTextBox2.Dock = DockStyle.Fill;
             richTextBox2.Location = new Point(0, 0);
             richTextBox2.Name = "richTextBox2";
@@ -263,10 +301,57 @@
             richTextBox2.Text = "";
             richTextBox2.TextChanged += richTextBox2_TextChanged;
             // 
-            // toolStripSeparator1
+            // contextMenuStrip2
             // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(168, 6);
+            contextMenuStrip2.BackColor = Color.DarkSeaGreen;
+            contextMenuStrip2.Items.AddRange(new ToolStripItem[] { firstLetterUpperCaseToolStripMenuItem, upperCaseAllToolStripMenuItem, lowerCaseAllToolStripMenuItem, toolStripSeparator4, clearToolStripMenuItem1, toolStripSeparator3, copyToClipboardToolStripMenuItem });
+            contextMenuStrip2.Name = "contextMenuStrip2";
+            contextMenuStrip2.Size = new Size(193, 126);
+            // 
+            // firstLetterUpperCaseToolStripMenuItem
+            // 
+            firstLetterUpperCaseToolStripMenuItem.Name = "firstLetterUpperCaseToolStripMenuItem";
+            firstLetterUpperCaseToolStripMenuItem.Size = new Size(192, 22);
+            firstLetterUpperCaseToolStripMenuItem.Text = "First Letter Upper Case";
+            firstLetterUpperCaseToolStripMenuItem.Click += firstLetterUpperCaseToolStripMenuItem_Click;
+            // 
+            // upperCaseAllToolStripMenuItem
+            // 
+            upperCaseAllToolStripMenuItem.Name = "upperCaseAllToolStripMenuItem";
+            upperCaseAllToolStripMenuItem.Size = new Size(192, 22);
+            upperCaseAllToolStripMenuItem.Text = "Upper Case All";
+            upperCaseAllToolStripMenuItem.Click += upperCaseAllToolStripMenuItem_Click;
+            // 
+            // lowerCaseAllToolStripMenuItem
+            // 
+            lowerCaseAllToolStripMenuItem.Name = "lowerCaseAllToolStripMenuItem";
+            lowerCaseAllToolStripMenuItem.Size = new Size(192, 22);
+            lowerCaseAllToolStripMenuItem.Text = "Lower Case All";
+            lowerCaseAllToolStripMenuItem.Click += lowerCaseAllToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator4
+            // 
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(189, 6);
+            // 
+            // clearToolStripMenuItem1
+            // 
+            clearToolStripMenuItem1.Name = "clearToolStripMenuItem1";
+            clearToolStripMenuItem1.Size = new Size(192, 22);
+            clearToolStripMenuItem1.Text = "Clear Current Area";
+            clearToolStripMenuItem1.Click += clearToolStripMenuItem1_Click;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(189, 6);
+            // 
+            // copyToClipboardToolStripMenuItem
+            // 
+            copyToClipboardToolStripMenuItem.Name = "copyToClipboardToolStripMenuItem";
+            copyToClipboardToolStripMenuItem.Size = new Size(192, 22);
+            copyToClipboardToolStripMenuItem.Text = "Copy to Clipboard";
+            copyToClipboardToolStripMenuItem.Click += copyToClipboardToolStripMenuItem_Click;
             // 
             // WordReplace
             // 
@@ -287,6 +372,7 @@
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
             contextMenuStrip1.ResumeLayout(false);
+            contextMenuStrip2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -313,5 +399,16 @@
         private ToolStripMenuItem lowerCaseToolStripMenuItem;
         private ToolStripMenuItem copyToToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem upperCaseToolStripMenuItem1;
+        private ToolStripMenuItem clearToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator2;
+        private ContextMenuStrip contextMenuStrip2;
+        private ToolStripMenuItem clearToolStripMenuItem1;
+        private ToolStripMenuItem firstLetterUpperCaseToolStripMenuItem;
+        private ToolStripMenuItem upperCaseAllToolStripMenuItem;
+        private ToolStripMenuItem lowerCaseAllToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripMenuItem copyToClipboardToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator4;
     }
 }

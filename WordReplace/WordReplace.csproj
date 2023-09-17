@@ -7,7 +7,12 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageIcon>9995529.png</PackageIcon>
+    <ApplicationIcon>Cornmanthe3rd-Squareplex-Other-word.512.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Cornmanthe3rd-Squareplex-Other-word.512.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="C:\Users\Steven Zhai\Downloads\9995529.png">

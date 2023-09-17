@@ -1,4 +1,4 @@
-using System.Windows.Forms;
+using System.Globalization;
 
 namespace WordReplace
 {
@@ -163,6 +163,63 @@ namespace WordReplace
         {
             if (richTextBox1.Text != "")
                 Clipboard.SetText(richTextBox1.Text);
+        }
+
+        private void upperCaseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var O_str = richTextBox1.Text;
+
+            if (O_str != "")
+            {
+                richTextBox1.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(O_str.ToLower());
+            }
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "";
+        }
+
+        private void clearToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Text = "";
+        }
+
+        private void firstLetterUpperCaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var O_str = richTextBox2.Text;
+
+            if (O_str != "")
+            {
+                richTextBox2.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(O_str.ToLower());
+            }
+        }
+
+        private void upperCaseAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var O_str = richTextBox2.Text;
+
+            if (O_str != "")
+            {
+                richTextBox2.Text = O_str.ToUpper();
+            }
+
+        }
+
+        private void lowerCaseAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var O_str = richTextBox2.Text;
+
+            if (O_str != "")
+            {
+                richTextBox2.Text = O_str.ToLower();
+            }
+        }
+
+        private void copyToClipboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (richTextBox2.Text != "")
+                Clipboard.SetText(richTextBox2.Text);
         }
     }
 }
