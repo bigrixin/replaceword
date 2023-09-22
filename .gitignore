@@ -31,6 +31,9 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+/WordReplace/bin/
+obj/*
+
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
@@ -357,13 +360,19 @@ MigrationBackup/
 # https://github.com/ganatan/angular-starter/blob/master/.gitignore
 
 # compiled output
-/WWWebUI/dist
-/WWWebUI/.angular
-/dist
+/WebUI/dist/*
+/WebUI/.angular
+/WebUI/.vscode/*
+dist/*
+/dist/*
 /tmp
-/WordReplace/bin
-/WordReplace/bin/Debug/net7.0-windows
 /out-tsc
+
+
+# zip
+*.zip
+*.rar
+
 # Only exists if Bazel was run
 /bazel-out
 

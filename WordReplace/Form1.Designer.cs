@@ -237,7 +237,7 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.BackColor = SystemColors.Info;
+            richTextBox1.BackColor = Color.PeachPuff;
             richTextBox1.ContextMenuStrip = contextMenuStrip1;
             richTextBox1.Dock = DockStyle.Fill;
             richTextBox1.Location = new Point(0, 0);
@@ -251,10 +251,10 @@
             // 
             // contextMenuStrip1
             // 
-            contextMenuStrip1.BackColor = Color.Moccasin;
+            contextMenuStrip1.BackColor = Color.Wheat;
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { upperCaseToolStripMenuItem1, upperCaseToolStripMenuItem, lowerCaseToolStripMenuItem, toolStripSeparator1, copyToToolStripMenuItem, toolStripSeparator2, clearToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(196, 126);
+            contextMenuStrip1.Size = new Size(196, 148);
             // 
             // upperCaseToolStripMenuItem1
             // 
@@ -303,7 +303,7 @@
             // 
             // richTextBox2
             // 
-            richTextBox2.BackColor = Color.LightGreen;
+            richTextBox2.BackColor = Color.FromArgb(192, 255, 192);
             richTextBox2.ContextMenuStrip = contextMenuStrip2;
             richTextBox2.Dock = DockStyle.Fill;
             richTextBox2.Location = new Point(0, 0);
@@ -315,10 +315,10 @@
             // 
             // contextMenuStrip2
             // 
-            contextMenuStrip2.BackColor = Color.DarkSeaGreen;
+            contextMenuStrip2.BackColor = Color.LightGreen;
             contextMenuStrip2.Items.AddRange(new ToolStripItem[] { firstLetterUpperCaseToolStripMenuItem, upperCaseAllToolStripMenuItem, lowerCaseAllToolStripMenuItem, toolStripSeparator4, clearToolStripMenuItem1, toolStripSeparator3, copyToClipboardToolStripMenuItem });
             contextMenuStrip2.Name = "contextMenuStrip2";
-            contextMenuStrip2.Size = new Size(193, 148);
+            contextMenuStrip2.Size = new Size(193, 126);
             // 
             // firstLetterUpperCaseToolStripMenuItem
             // 
