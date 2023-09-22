@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             openFileDialog1 = new OpenFileDialog();
             panel1 = new Panel();
+            button3 = new Button();
             Browse = new Button();
             label1 = new Label();
             panel2 = new Panel();
@@ -78,6 +79,7 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(button3);
             panel1.Controls.Add(Browse);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -85,6 +87,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1177, 38);
             panel1.TabIndex = 5;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(1096, 7);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 5;
+            button3.Text = "AutoStart";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // Browse
             // 
@@ -306,7 +318,7 @@
             contextMenuStrip2.BackColor = Color.DarkSeaGreen;
             contextMenuStrip2.Items.AddRange(new ToolStripItem[] { firstLetterUpperCaseToolStripMenuItem, upperCaseAllToolStripMenuItem, lowerCaseAllToolStripMenuItem, toolStripSeparator4, clearToolStripMenuItem1, toolStripSeparator3, copyToClipboardToolStripMenuItem });
             contextMenuStrip2.Name = "contextMenuStrip2";
-            contextMenuStrip2.Size = new Size(193, 126);
+            contextMenuStrip2.Size = new Size(193, 148);
             // 
             // firstLetterUpperCaseToolStripMenuItem
             // 
@@ -410,5 +422,6 @@
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripMenuItem copyToClipboardToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator4;
+        private Button button3;
     }
 }

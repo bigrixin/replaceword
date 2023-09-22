@@ -1,4 +1,6 @@
+using System.Diagnostics;
 using System.Globalization;
+
 
 namespace WordReplace
 {
@@ -221,5 +223,19 @@ namespace WordReplace
             if (richTextBox2.Text != "")
                 Clipboard.SetText(richTextBox2.Text);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
+            ProcessStartInfo startInfo = new ProcessStartInfo
+            {
+                Arguments = folderPath,
+                FileName = "explorer.exe"
+            };
+
+            Process.Start(startInfo);
+        }
+
+
     }
 }
